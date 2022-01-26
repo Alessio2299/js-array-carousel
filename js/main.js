@@ -61,6 +61,6 @@ imgActive.classList.add("active");
 
 buttonDown.addEventListener("click",
   function(){
-    alert("....")
+    
   }
 )

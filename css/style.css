@@ -68,12 +68,13 @@
   background-color: rgba(151, 151, 151, 0.527);
   border-radius: 50%;
   position: absolute;
-  left: 50%;
+  right: 6%;
   transform: translateX(-50%);
   text-align: center;
   line-height: 35px;
   font-size: 25px;
   cursor: pointer;
+  z-index: 10;
 }
 .arrow:hover{
   background-color: rgba(92, 92, 92, 0.527);
