@@ -1,7 +1,11 @@
 let containerImg = document.querySelector(".box-principal-img");
 let titleImg = document.getElementById("title");
 let textImg = document.getElementById("text-title");
-let asideImg = document.querySelector(".box-aside-img")
+let asideImg = document.querySelector(".box-aside-img");
+let buttonDown = document.getElementById("down");
+let buttonUp = document.getElementById("up");
+console.log(buttonDown);
+console.log(titleImg);
 
 const img = [
   'img/01.jpg',
@@ -45,3 +49,18 @@ containerImg.innerHTML = slides;
 titleImg.innerHTML = contentTitle;
 textImg.innerHTML = contentText;
 asideImg.innerHTML += aside;
+
+let currentImg = document.getElementsByTagName("IMG")[0];
+let currentTitle = document.getElementsByTagName("H2")[0];
+let currentText = document.getElementsByTagName("P")[0];
+let imgActive = document.querySelector(".aside-img");
+currentImg.classList.add("current");
+currentTitle.classList.add("current");
+currentText.classList.add("current");
+imgActive.classList.add("active");
+
+buttonDown.addEventListener("click",
+  function(){
+    alert("....")
+  }
+)

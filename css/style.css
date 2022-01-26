@@ -17,13 +17,18 @@
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
+  box-shadow: 5px 5px 50px #000;
 }
 .content-text{
+  width: 78%;
   position: absolute;
   bottom: 20px;
-  right: 180px;
+  left: 0;
   text-align: end;
   color: #fff;
+}
+.content-text p{
+  font-size: 12px;
 }
 .box-principal-img{
   width: 80%;
