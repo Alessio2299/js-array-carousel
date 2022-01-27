@@ -50,17 +50,72 @@ titleImg.innerHTML = contentTitle;
 textImg.innerHTML = contentText;
 asideImg.innerHTML += aside;
 
-let currentImg = document.getElementsByTagName("IMG")[0];
-let currentTitle = document.getElementsByTagName("H2")[0];
-let currentText = document.getElementsByTagName("P")[0];
-let imgActive = document.querySelector(".aside-img");
-currentImg.classList.add("current");
-currentTitle.classList.add("current");
-currentText.classList.add("current");
-imgActive.classList.add("active");
+let current = 0;
+
+let currentImg = document.getElementsByTagName("IMG");
+let currentTitle = document.getElementsByTagName("H2");
+let currentText = document.getElementsByTagName("P");
+let imgActive = document.getElementsByClassName("aside-img");
+currentImg[current].classList.add("current");
+currentTitle[current].classList.add("current");
+currentText[current].classList.add("current");
+imgActive[current].classList.add("active");
 
 buttonDown.addEventListener("click",
   function(){
-    
+    if(current < img.length -1){
+      currentImg[current].classList.remove("current");
+      currentTitle[current].classList.remove("current");
+      currentText[current].classList.remove("current");
+      imgActive[current].classList.remove("active");
+      current++;
+      currentImg[current].classList.add("current");
+      currentTitle[current].classList.add("current");
+      currentText[current].classList.add("current");
+      imgActive[current].classList.add("active");
+      
+    } else if(current == img.length -1){
+
+      currentImg[current].classList.remove("current");
+      currentTitle[current].classList.remove("current");
+      currentText[current].classList.remove("current");
+      imgActive[current].classList.remove("active");
+      
+      current = 0;
+      
+      currentImg[current].classList.add("current");
+      currentTitle[current].classList.add("current");
+      currentText[current].classList.add("current");
+      imgActive[current].classList.add("active");
+    }
+  }
+)
+buttonUp.addEventListener("click",
+  function(){
+    if(current < img.length && current != 0){
+      currentImg[current].classList.remove("current");
+      currentTitle[current].classList.remove("current");
+      currentText[current].classList.remove("current");
+      imgActive[current].classList.remove("active");
+      current--;
+      currentImg[current].classList.add("current");
+      currentTitle[current].classList.add("current");
+      currentText[current].classList.add("current");
+      imgActive[current].classList.add("active");
+
+    } else if(current == 0){
+
+      currentImg[current].classList.remove("current");
+      currentTitle[current].classList.remove("current");
+      currentText[current].classList.remove("current");
+      imgActive[current].classList.remove("active");
+      
+      current = img.length -1;
+
+      currentImg[current].classList.add("current");
+      currentTitle[current].classList.add("current");
+      currentText[current].classList.add("current");
+      imgActive[current].classList.add("active");
+    }
   }
 )
